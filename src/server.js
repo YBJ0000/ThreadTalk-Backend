@@ -41,11 +41,22 @@ import {
 
 const app = express();
 
+const allowedOriginsFromEnv = process.env.ALLOWED_ORIGINS 
+  ? process.env.ALLOWED_ORIGINS.split(',') 
+  : [];
+
+const allowedOrigins = [
+  'http://localhost:4173', 
+  'http://localhost:5173', 
+  'https://ybj-threadtalk.vercel.app',
+  ...allowedOriginsFromEnv
+];
+
+
 // 替换默认的 cors 配置
 // 使用函数形式的origin配置，更灵活处理
 app.use(cors({
   origin: function(origin, callback) {
-    const allowedOrigins = ['http://localhost:4173', 'http://localhost:5173', 'https://ybj-threadtalk.vercel.app'];
     // 允许没有来源的请求（如移动应用或Postman）
     if (!origin) return callback(null, true);
     
