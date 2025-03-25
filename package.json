@@ -10,7 +10,7 @@
   "scripts": {
     "test": "jest test/main.test.js",
     "lint": "eslint src/*.js",
-    "start": "cd src && node server.js",
+    "start": "node src/server.js --ignore database.json",
     "reset": "jest test/database.test.js",
     "clear": "npx rimraf database.json"
   },
