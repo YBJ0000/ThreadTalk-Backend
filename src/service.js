@@ -362,8 +362,16 @@ export const userUpdate = (authUserId, email, password, name, image) => dataLock
   if (name) { users[authUserId].name = name; }
   if (password) { users[authUserId].password = password; }
   if (image) { users[authUserId].image = image; }
-  if (email && getUserIdFromEmail(email) !== undefined) {
-    throw new InputError(`Email address ${email} already taken`);
-  } else if (email) { users[authUserId].email = email; }
+  
+  // 修改前
+  // if (email && getUserIdFromEmail(email) !== undefined) {
+  // 修改后：允许保留原邮箱
+  const currentEmail = users[authUserId].email;
+  if (email && email !== currentEmail) {
+    if (getUserIdFromEmail(email) !== undefined) {
+      throw new InputError(`Email address ${email} already taken`);
+    }
+    users[authUserId].email = email;
+  }
   resolve();
 });
