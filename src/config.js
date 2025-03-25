@@ -1,1 +1,1 @@
-export const BACKEND_PORT = 5005
+export const BACKEND_PORT = process.env.BACKEND_PORT || 5005;
