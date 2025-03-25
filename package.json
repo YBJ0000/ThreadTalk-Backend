@@ -4,6 +4,9 @@
   "description": "",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "18.20.7"
+  },
   "scripts": {
     "test": "jest test/main.test.js",
     "lint": "eslint src/*.js",
