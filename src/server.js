@@ -41,7 +41,13 @@ import {
 
 const app = express();
 
-app.use(cors());
+// 替换默认的 cors 配置
+app.use(cors({
+  origin: ['http://localhost:4173', 'http://localhost:5173', 'https://ybj-threadtalk.vercel.app/'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.urlencoded({ extended: true, }));
 app.use(express.json({ limit: '50mb', }));
 
