@@ -1,0 +1,81 @@
+{
+  "users": {
+    "17253": {
+      "email": "augustine@email.com",
+      "name": "Augustine",
+      "password": "august",
+      "image": null,
+      "admin": false,
+      "threadsWatching": []
+    },
+    "73090": {
+      "email": "james@email.com",
+      "name": "James",
+      "password": "betty",
+      "image": null,
+      "admin": false,
+      "threadsWatching": []
+    },
+    "90794": {
+      "email": "betty@email.com",
+      "name": "Betty",
+      "password": "cardigan",
+      "image": null,
+      "admin": true,
+      "threadsWatching": []
+    }
+  },
+  "threads": {
+    "871845": {
+      "id": 871845,
+      "creatorId": 90794,
+      "title": "Where is my burger?",
+      "isPublic": true,
+      "content": "So I cant find my burger plz help it was round",
+      "lock": false,
+      "createdAt": "2025-03-25T10:17:14.794Z",
+      "likes": {},
+      "watchees": {}
+    },
+    "878893": {
+      "id": 878893,
+      "creatorId": 90794,
+      "title": "Where are my fries?",
+      "isPublic": true,
+      "content": "I like fries but I dont have any right now rip",
+      "lock": false,
+      "createdAt": "2025-03-25T10:17:14.793Z",
+      "likes": {},
+      "watchees": {}
+    }
+  },
+  "comments": {
+    "304439": {
+      "id": 304439,
+      "creatorId": 90794,
+      "threadId": 878893,
+      "parentCommentId": 927957,
+      "content": "Sweet I'll take that",
+      "createdAt": "2025-03-25T10:17:14.799Z",
+      "likes": {}
+    },
+    "416440": {
+      "id": 416440,
+      "creatorId": 17253,
+      "threadId": 878893,
+      "parentCommentId": null,
+      "content": "I also have fries but only soggy ones",
+      "createdAt": "2025-03-25T10:17:14.797Z",
+      "likes": {}
+    },
+    "927957": {
+      "id": 927957,
+      "creatorId": 17253,
+      "threadId": 878893,
+      "parentCommentId": null,
+      "content": "I like fries but I dont have any right now rip",
+      "createdAt": "2025-03-25T10:17:14.796Z",
+      "likes": {}
+    }
+  }
+}
