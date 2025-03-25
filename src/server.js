@@ -3,7 +3,7 @@ import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 import cors from 'cors';
 
-import { InputError, AccessError, } from './error';
+import { InputError, AccessError, } from './error.js';
 import { BACKEND_PORT } from './config.js';
 import swaggerDocument from '../swagger.json';
 import {
@@ -37,7 +37,7 @@ import {
   userGet,
   userAdminChange,
   userUpdate,
-} from './service';
+} from './service.js';
 
 const app = express();
 
