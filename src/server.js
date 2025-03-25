@@ -5,7 +5,7 @@ import cors from 'cors';
 
 import { InputError, AccessError, } from './error.js';
 import { BACKEND_PORT } from './config.js';
-import swaggerDocument from '../swagger.json' assert { type: "json" };
+import swaggerDocument from '../swagger.json' with { type: "json" };
 import {
   save,
   reset,
